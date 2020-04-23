@@ -1,7 +1,7 @@
-import cardGame,leaderboard
+import card_game,leaderboard
 
 # run game
-results = cardGame.play(input("Please enter the name of player 1: "),input("Please enter the name of player 2: "))
+results = card_game.play(input("Please enter the name of player 1: "),input("Please enter the name of player 2: "))
 print(results[0],"won with",len(results[1]),"cards against",str(results[2])+"\'s",results[3]) # winner name, winner's number of cards, loser name, loser's number of cards
 
 # print cards that winner had
