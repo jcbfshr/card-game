@@ -19,9 +19,9 @@ class Player:
 # create deck of cards and shuffle
 def prepare():
     # make deck based on given suits and faces
-    for i in range(len(suits)):
-        for x in range(len(faces)):
-            deck.append([suits[i],faces[x]])
+    for suit in suits:
+        for face in faces:
+            deck.append([suit,face])
 
     algo.shuffle(deck)
     return deck
@@ -75,6 +75,6 @@ def play(name1,name2):
         # if deck is exhausted
         if len(deck) == 0:
             break
-    
+
     # return winner and loser information
     return [p1.name,p1.deck,p2.name,len(p2.deck)] if game_winner(p1.deck,p2.deck) == "p1" else [p2.name,p2.deck,p1.name,len(p1.deck)] # winner name, winner's number of cards, loser name, loser's number of cards

@@ -19,7 +19,7 @@ def update(new_leaderboard):
         file.write(",")
         file.write(str(entry[1])) # score
         file.write("\n")
-    
+
     file.close()
 
 # add player to leaderboard file
