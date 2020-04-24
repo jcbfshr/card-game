@@ -1,6 +1,9 @@
 # open leaderboard file
 def access():
-    file = open("leaderboard.txt","r")
+    try:
+        file = open("leaderboard.txt","r")
+    except:
+        file = open("leaderboard.txt","w+")
     leaderboard = [] # start with empty leaderboard
 
     # run through each entry in leaderboard and append to array
