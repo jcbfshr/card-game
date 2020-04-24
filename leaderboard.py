@@ -2,7 +2,7 @@
 def access():
     try:
         file = open("leaderboard.txt","r")
-    except:
+    except FileNotFoundError:
         file = open("leaderboard.txt","w+")
     leaderboard = [] # start with empty leaderboard
 

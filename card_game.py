@@ -7,14 +7,16 @@ class Card:
         self.suit = suit
         self.face = face
 
+# deck object storing all card possibilites
 class Deck:
+    # make deck based on given suits and faces
     def __init__(self):
         # card value possibilities
         self.suits = ["red","black","yellow"]
         self.faces = [x for x in range(1, 11)]
         self.cards = []
 
-        # make deck based on given suits and faces
+        # make deck
         for suit in self.suits:
             for face in self.faces:
                 self.cards.append(Card(suit,face))
@@ -23,6 +25,7 @@ class Deck:
 
 # player object to store cards in hand and player name
 class Player:
+    # name of player and cards held (local deck)
     def __init__(self,name):
         self.name = name
         self.deck = []
