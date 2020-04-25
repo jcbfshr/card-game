@@ -7,7 +7,7 @@ print(results[0],"won with",len(results[1]),"cards against",str(results[2])+"\'s
 # print cards that winner had
 print(results[0],"had:")
 for i in range(len(results[1])):
-    print(results[1][i][0].capitalize(),results[1][i][1]) # suit, value
+    print(results[1][i].suit.capitalize(),results[1][i].face) # suit, value
 
 # update leaderboard and store top 5
 leaderboard.add(results[0],len(results[1]))
